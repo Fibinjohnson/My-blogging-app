@@ -1,5 +1,6 @@
-import React, { Component }  from 'react';
+import React ,{component} from 'react';
 import { useParams } from 'react-router-dom';
+
 
 import useFetch from './useFetch';
 import { useNavigate } from 'react-router-dom';
@@ -11,9 +12,7 @@ import { useNavigate } from 'react-router-dom';
        
         const handleClick=()=>{
           
-           fetch('http://localhost:8000/blogs/'+ id,{
-           method:"DELETE"
-        })
+           fetch('http://localhost:8000/blogs/'+ id,{method:"DELETE"})
         .then(()=>History('/'));
         }
     return(
